@@ -29,7 +29,6 @@ public class triangleServlet extends HttpServlet {
 			int min = 10;
 			int max = 220;
 
-			
 			List<TriangleClassify> listTr = new ArrayList<>();
 
 			Value numbers = new Value();
@@ -37,7 +36,7 @@ public class triangleServlet extends HttpServlet {
 			if (type.equals("5")) {
 				int[] list = numbers.getbvaValue();
 				int a, b, c;
-				int normal = (list[list.length - 1]) / 2;
+				int normal = (list[list.length - 1] + list[0]) / 2;
 				for (int i = 0; i < 5; i++) {
 					a = normal;
 					b = normal;
@@ -76,7 +75,7 @@ public class triangleServlet extends HttpServlet {
 				}
 			} else {
 				int[] list = numbers.getrbvaValue();
-				int normal = list[list.length - 1] / 2;
+				int normal = (list[list.length - 1] + list[0]) / 2;
 				int a, b, c;
 				for (int i = 0; i < 7; i++) {
 					a = normal;
